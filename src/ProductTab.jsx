@@ -1,7 +1,7 @@
 import Product from "./Product.jsx";
 
 function ProductTab() {
-  // let option1 = ["hello", "good morning", "hey hii"];
+  
   return (
     <div>
       <Product title="pen" price={30}/>
