@@ -1,14 +1,23 @@
 import "./Product.css";
+import Price from "./price";
 
-function Product({ title, price, features }) {
-    let styles = { backgroundColor : price > 30000 ? "red" : "" };
-    return (
-        <div className="Product" >
-            <h3>{title}</h3>
-            <h3>price: {price}</h3>
-            {price>30000 && <p style={styles}> Discount of 5% </p>}
-        </div>
-    );
+function Product({ title, idx }) {
+  const oldPrices = [500, 1200, 750, 300, 950];
+  const newPrices = [450, 1000, 700, 250, 900];
+  const descriptions = [
+    "Ergonomic wireless mouse.",
+    "Stylus for iPad drawing.",
+    "RGB gaming keyboard combo.",
+    "Basic USB mic for recording.",
+  ];
+
+  return (
+    <div className="Product">
+      <h3>{title}</h3>
+      <p>{descriptions[idx]}</p>
+      <Price oldPrices={oldPrices[idx]} newPrices={newPrices[idx]} />
+    </div>
+  );
 }
 
 export default Product;
