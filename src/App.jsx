@@ -9,7 +9,7 @@ function App() {
     <>
     {/* <h2>Blockbuster Deals | Shop Now ...</h2>
     //   <ProductTab /> */}
-      <Form/>
+      <Button/>
     </>
   );
 }
